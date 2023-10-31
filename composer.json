@@ -1,0 +1,31 @@
+{
+	"name": "neverlxsss/syrve-laravel",
+	"description": "Laravel wrapper package for the syrve API",
+	"version": "dev-main",
+	"minimum-stability": "dev",
+	"type": "library",
+	"authors": [
+		{
+			"name": "Tony Sanin",
+			"email": "sanin.tony.dev@gmail.com"
+		}
+	],
+	"require": {
+		"guzzlehttp/guzzle": "^7.2"
+	},
+	"autoload": {
+		"psr-4": {
+			"Neverlxsss\\Syrve\\": "src/"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Neverlxsss\\Syrve\\SyrveServiceProvider"
+			],
+			"aliases": {
+				"Syrve": "Neverlxsss\\Syrve\\Facades\\Syrve"
+			}
+		}
+	}
+}
