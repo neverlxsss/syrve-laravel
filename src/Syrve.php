@@ -542,4 +542,52 @@ class Syrve
 
         return $response;
     }
+
+    /**
+     * Get webhooks settings for specified organization and authorized API login.
+     *
+     * @param string $organizationId
+     *
+     * @return \Neverlxsss\Syrve\Support\Response
+     */
+    public function webhooksSettings(string $organizationId): Response
+    {
+        $response = $this->client->api(
+            "/api/1/webhooks/settings",
+            Method::POST->value,
+            [],
+            [
+                'organizationId'  => $organizationId,
+            ]
+        );
+
+        return $response;
+    }
+
+    /**
+     * Update webhooks settings for specified organization and authorized API login.
+     *
+     * @param string      $organizationId
+     * @param string      $webHooksUri
+     * @param string|null $authToken
+     * @param array       $webhooksFilter
+     *
+     * @return \Neverlxsss\Syrve\Support\Response
+     */
+    public function webhooksUpdateSettings(string $organizationId, string $webHooksUri, string $authToken = null, array $webhooksFilter = []): Response
+    {
+        $response = $this->client->api(
+            "/api/1/webhooks/update_settings",
+            Method::POST->value,
+            [],
+            [
+                'organizationId' => $organizationId,
+                'webHooksUri' => $webHooksUri,
+                'authToken' => $authToken,
+                'webhooksFilter' => $webhooksFilter,
+            ]
+        );
+
+        return $response;
+    }
 }

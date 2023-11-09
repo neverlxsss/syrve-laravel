@@ -31,10 +31,10 @@ use Neverlxsss\Syrve\Support\Response;
  * @method static Response commandsStatus(string $organizationId, string $correlationId)
  * @method static Response availableRestaurantSections(array $terminalGroupIds, bool $returnSchema = false, ?int $revision = null)
  * @method static Response createOrder(string $organizationId, string $terminalGroupId, $order, array $createOrderSettings = [])
+ * @method static Response webhooksSettings(string $organizationId)
+ * @method static Response webhooksUpdateSettings(string $organizationId, string $webHooksUri, string $authToken = null, array $webhooksFilter = [])
  * @package Neverlxsss\Syrve\Facades
  */
-
-
 class Syrve extends Facade
 {
     /**
