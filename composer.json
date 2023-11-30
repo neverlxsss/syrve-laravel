@@ -1,7 +1,7 @@
 {
 	"name": "neverlxsss/syrve-laravel",
 	"description": "Laravel wrapper package for the syrve API",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"minimum-stability": "dev",
 	"type": "library",
 	"authors": [
