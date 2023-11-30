@@ -31,7 +31,7 @@ use Neverlxsss\Syrve\Support\Response;
  * @method static Response commandsStatus(string $organizationId, string $correlationId)
  * @method static Response availableRestaurantSections(array $terminalGroupIds, bool $returnSchema = false, ?int $revision = null)
  * @method static Response createOrder(string $organizationId, string $terminalGroupId, $order, array $createOrderSettings = [])
- * @method static Response getOrdersByTables(array $organizationIds, array $tableIds, array $sourceKeys = [], array $statuses = [], string $dateFrom, string $dateTo)
+ * @method static Response getOrdersByTables(array $organizationIds, array $tableIds, array $sourceKeys = [], array $statuses = [], string $dateFrom = null, string $dateTo = null)
  * @method static Response webhooksSettings(string $organizationId)
  * @method static Response webhooksUpdateSettings(string $organizationId, string $webHooksUri, string $authToken = null, array $webhooksFilter = [])
  * @package Neverlxsss\Syrve\Facades
