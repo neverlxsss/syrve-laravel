@@ -551,11 +551,11 @@ class Syrve
      * @param array  $sourceKeys
      * @param array  $statuses
      * @param string $dateFrom
-     * @param string $$dateTo
+     * @param string $dateTo
      *
      * @return \Neverlxsss\Syrve\Support\Response
      */
-    public function getOrdersByTables(array $organizationIds, array $tableIds, array $sourceKeys = [], array $statuses = [], string $dateFrom, string $dateTo): Response
+    public function getOrdersByTables(array $organizationIds, array $tableIds, array $sourceKeys = [], array $statuses = [], string $dateFrom = null, string $dateTo = null): Response
     {
         $response = $this->client->api(
             "/api/1/order/by_table",
