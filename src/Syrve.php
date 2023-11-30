@@ -544,6 +544,37 @@ class Syrve
     }
 
     /**
+     * Retrieve orders by tables.
+     *
+     * @param array  $organizationIds
+     * @param array  $tableIds
+     * @param array  $sourceKeys
+     * @param array  $statuses
+     * @param string $dateFrom
+     * @param string $$dateTo
+     *
+     * @return \Neverlxsss\Syrve\Support\Response
+     */
+    public function getOrdersByTables(array $organizationIds, array $tableIds, array $sourceKeys = [], array $statuses = [], string $dateFrom, string $dateTo): Response
+    {
+        $response = $this->client->api(
+            "/api/1/order/by_table",
+            Method::POST->value,
+            [],
+            [
+                'organizationIds'  => $organizationIds,
+                'tableIds' => $tableIds,
+                'sourceKeys' => $sourceKeys,
+                'statuses' => $statuses,
+                'dateFrom' => $dateFrom,
+                'dateTo' => $dateTo,
+            ]
+        );
+
+        return $response;
+    }
+
+    /**
      * Get webhooks settings for specified organization and authorized API login.
      *
      * @param string $organizationId
